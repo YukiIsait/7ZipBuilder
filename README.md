@@ -4,6 +4,14 @@
 
 目前更换的文件关联图标和文件管理器贴图均为本人在网上下载自用，暂时未找到作者，如果作者大大看到本仓库可以联系添加作者信息。
 
+## 文件管理器预览
+
+![Preview1](Previews/Preview1.png)
+
+## 文件关联图标预览
+
+![Preview1](Previews/Preview2.png)
+
 ## 使用方法
 
 > - PowerShell 执行 `.ps1` 需要开启相应权限，本文不进行赘述
@@ -32,10 +40,6 @@
     1. 打开 PowerShell
     2. 执行 `.\Pack.ps1 7z2408`
     3. 检查生成的安装包 `7z2408.exe` 是否可用
-
-## 预览图片
-
-![Preview1](Previews/Preview1.png)
 
 ## 开源许可
 
