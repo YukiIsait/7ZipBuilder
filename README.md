@@ -33,6 +33,10 @@
     2. 执行 `.\Pack.ps1 7z2408`
     3. 检查生成的安装包 `7z2408.exe` 是否可用
 
+## 预览图片
+
+![Preview1](Previews/Preview1.png)
+
 ## 开源许可
 
 - 本项目采用 MIT 许可证，详见[许可文件](LICENSE.md)
