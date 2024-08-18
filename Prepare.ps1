@@ -25,4 +25,4 @@ Copy-Item -Force -Path "$resDir\Format7zF.rc" -Destination "$buildPrefix\CPP\7zi
 Copy-Item -Force -Path "$resDir\Fm.rc" -Destination "$buildPrefix\CPP\7zip\Bundles\Fm\resource.rc"
 
 # 拷贝UI图
-# Copy-Item -Force -Path "$resDir\ToolBarIcons\*.bmp" -Destination "$buildPrefix\CPP\7zip\UI\FileManager"
+Copy-Item -Force -Path "$resDir\ToolBarIcons\*.bmp" -Destination "$buildPrefix\CPP\7zip\UI\FileManager"
