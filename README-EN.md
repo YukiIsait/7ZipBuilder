@@ -45,7 +45,7 @@ The file association icons and file manager skins currently used were downloaded
 
 ## License
 
-- This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+- This project is licensed under the MIT license. See the [LICENSE](LICENSE.md) file for details.
 - The 7-Zip project is licensed under the GNU LGPL, BSD 3, and unRAR licenses. See the [LICENSE](https://www.7-zip.org/license.txt) file for details.
 
 ## About Us
