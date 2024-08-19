@@ -50,5 +50,6 @@
 
 ## 关于我们
 
+- 软件发布页：[吾爱破解 &lt;https://www.52pojie.cn/thread-1955841-1-1.html&gt;](https://www.52pojie.cn/thread-1955841-1-1.html)
 - 官方网站：[雨糖科技 &lt;https://raincandy.tech&gt;](https://raincandy.tech)
 - GitHub：[雨糖科技 &lt;https://github.com/RainCandyTech&gt;](https://github.com/RainCandyTech)

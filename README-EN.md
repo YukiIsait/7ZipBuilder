@@ -50,5 +50,6 @@ The file association icons and file manager skins currently used were downloaded
 
 ## About Us
 
+- Release: [52PoJie &lt;https://www.52pojie.cn/thread-1955841-1-1.html&gt;](https://www.52pojie.cn/thread-1955841-1-1.html)
 - Website: [RainCandy Tech &lt;https://raincandy.tech&gt;](https://raincandy.tech)
 - GitHub: [RainCandy Tech &lt;https://github.com/RainCandyTech&gt;](https://github.com/RainCandyTech)
