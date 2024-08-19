@@ -16,9 +16,9 @@
 
 ## 使用方法
 
-> - 用 PowerShell 执行 `.ps1` 需要开启相应权限，本文不进行赘述
-> - 编译需要 **Visual Studio** 并已安装**使用 C++ 的桌面开发**组件
-> - 以下过程以 `7z2408` 版本为例
+> - 用 PowerShell 执行 `.ps1` 需要开启相应权限，本文不进行赘述。
+> - 编译需要 **Visual Studio** 并已安装**使用 C++ 的桌面开发**组件。
+> - 以下过程以 `7z2408` 版本为例。
 
 1. 下载源代码并替换资源文件：
 
@@ -45,8 +45,8 @@
 
 ## 开源许可
 
-- 本项目采用 MIT 许可证，详见[许可文件](LICENSE.md)
-- 7-Zip 项目采用 GNU LGPL、BSD 3 以及 unRAR 许可证，详见[许可文件](https://www.7-zip.org/license.txt)
+- 本项目采用 MIT 许可证，详见[许可文件](LICENSE.md)。
+- 7-Zip 项目采用 GNU LGPL、BSD 3 以及 unRAR 许可证，详见[许可文件](https://www.7-zip.org/license.txt)。
 
 ## 关于我们
 
