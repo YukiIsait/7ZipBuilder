@@ -44,7 +44,7 @@
 ## 开源许可
 
 - 本项目采用 MIT 许可证，详见[许可文件](LICENSE.md)
-- 7-Zip 项目许可证详见[许可文件](https://www.7-zip.org/license.txt)
+- 7-Zip 项目采用 GNU LGPL、BSD 3 以及 unRAR 许可证，详见[许可文件](https://www.7-zip.org/license.txt)
 
 ## 关于我们
 
