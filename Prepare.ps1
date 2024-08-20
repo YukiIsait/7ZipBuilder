@@ -12,8 +12,10 @@ if (-not (Test-Path "$workDir\7zR.exe")) {
 }
 
 # 下载并解压源码
-if (-not (Test-Path "$buildPrefix.7z")) {
-    [System.Net.WebClient]::new().DownloadFile("https://7-zip.org/a/$buildVersion-src.7z", "$buildPrefix.7z")
+if (-not (Test-Path $buildPrefix)) {
+    if (-not (Test-Path "$buildPrefix.7z")) {
+        [System.Net.WebClient]::new().DownloadFile("https://7-zip.org/a/$buildVersion-src.7z", "$buildPrefix.7z")
+    }
     & "$workDir\7zr.exe" x "$buildPrefix.7z" -o"$buildPrefix"
 }
 
