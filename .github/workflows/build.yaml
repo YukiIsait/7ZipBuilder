@@ -1,0 +1,31 @@
+name: Build
+on:
+  - workflow_dispatch
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out git repository
+        uses: actions/checkout@v4
+      - name: Get latest version
+        shell: pwsh
+        run: |
+          $7zHtml = Invoke-WebRequest -Uri 'https://www.7-zip.org/download.html'
+          $7zVerMatchInfo = Select-String -InputObject $7zHtml.Content -Pattern 'Download 7-Zip ([\d.]+) \(\d{4}-\d{2}-\d{2}\)'
+          $7zVer = $7zVerMatchInfo.Matches.Groups[1].Value.Replace('.', '')
+          Set-Content -Path 7zVer.txt -Value "7z$7zVer"
+      - name: Prepare source code
+        shell: pwsh
+        run: Get-Content -Path 7zVer.txt | .\Prepare.ps1
+      - name: Build
+        shell: pwsh
+        run: Get-Content -Path 7zVer.txt | .\Build.ps1
+      - name: Pack
+        shell: pwsh
+        run: Get-Content -Path 7zVer.txt | .\Pack.ps1
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: 7-Zip Installer
+          path: ./*.exe
+          if-no-files-found: error

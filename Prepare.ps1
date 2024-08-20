@@ -1,4 +1,5 @@
 ﻿param(
+    [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
     [string] $buildVersion
 )
 
