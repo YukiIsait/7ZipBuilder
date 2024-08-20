@@ -14,7 +14,8 @@ jobs:
           $7zVerMatchInfo = Select-String -InputObject $7zHtml.Content -Pattern 'Download 7-Zip ([\d.]+) \(\d{4}-\d{2}-\d{2}\)'
           $7zVer = $7zVerMatchInfo.Matches.Groups[1].Value.Replace('.', '')
           Set-Content -Path 7zVer.txt -Value "7z$7zVer"
-      - name: Prepare source code
+          Write-Output "The latest version of 7-Zip is 7z$7zVer."
+      - name: Prepare
         shell: pwsh
         run: Get-Content -Path 7zVer.txt | .\Prepare.ps1
       - name: Build
