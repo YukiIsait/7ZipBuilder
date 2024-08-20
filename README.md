@@ -20,28 +20,13 @@
 > - 编译需要 **Visual Studio** 并已安装**使用 C++ 的桌面开发**组件。
 > - 以下过程以 `7z2408` 版本为例。
 
-1. 下载源代码并替换资源文件：
+1. 自动构建：
 
-    1. 打开 PowerShell。
-    2. 执行 `.\Prepare.ps1 7z2408`。
+    ```pwsh
+    .\AutoBuild.ps1 7z2408
+    ```
 
-2. 编译 x64 的软件本体：
-
-    1. 打开 Visual Studio 的 x64 开发人员命令提示符，例如 **x64 Native Tools Command Prompt for VS 2022**。
-    2. 切换到 PowerShell，如果已安装 PowerShell Core 可输入 `pwsh`，否则应输入 `powershell`。
-    3. 执行 `.\Build.ps1 7z2408`。
-
-3. 编译 x86 的 Shell 拓展：
-
-    1. 打开 Visual Studio 的 x86 开发人员命令提示符，例如 **x64_x86 Cross Tools Command Prompt for VS 2022**。
-    2. 切换到 PowerShell，如果已安装 PowerShell Core 可输入 `pwsh`，否则应输入 `powershell`。
-    3. 执行 `.\BuildShell32.ps1 7z2408`。
-
-4. 打包 7-Zip 并制作安装包：
-
-    1. 打开 PowerShell。
-    2. 执行 `.\Pack.ps1 7z2408`。
-    3. 检查生成的安装包 **7z2408.exe** 是否可用。
+2. 检查生成的安装包 **7z2408.exe** 是否可用。
 
 ## 开源许可
 

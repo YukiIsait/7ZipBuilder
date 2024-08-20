@@ -20,28 +20,13 @@ The file association icons and file manager skins currently used were downloaded
 > - Compilation requires **Visual Studio** with the **Desktop development with C++** workload installed.
 > - The following process uses version `7z2408` as an example.
 
-1. Download the source code and replace resource files.
+1. Automatic Build:
 
-    1. Open PowerShell.
-    2. Execute `.\Prepare.ps1 7z2408`.
+    ```pwsh
+    .\AutoBuild.ps1 7z2408
+    ```
 
-2. Compile the x64 version of the software.
-
-    1. Open the x64 Developer Command Prompt for Visual Studio, e.g., **x64 Native Tools Command Prompt for VS 2022**.
-    2. Switch to PowerShell. If PowerShell Core is installed, enter `pwsh`; otherwise, enter `powershell`.
-    3. Execute `.\Build.ps1 7z2408`.
-
-3. Compile the x86 Shell extension.
-
-    1. Open the x86 Developer Command Prompt for Visual Studio, e.g., **x64_x86 Cross Tools Command Prompt for VS 2022**.
-    2. Switch to PowerShell. If PowerShell Core is installed, enter `pwsh`; otherwise, enter `powershell`.
-    3. Execute `.\BuildShell32.ps1 7z2408`.
-
-4. Package 7-Zip and create the installer.
-
-    1. Open PowerShell.
-    2. Execute `.\Pack.ps1 7z2408`.
-    3. Check if the generated installer **7z2408.exe** is functional.
+2. Check if the generated installer **7z2408.exe** is functional.
 
 ## License
 
