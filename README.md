@@ -44,8 +44,3 @@
 
 - 本项目采用 MIT 许可证，详见[许可文件](LICENSE.md)。
 - 7-Zip 项目采用 GNU LGPL、BSD 3 以及 unRAR 许可证，详见[许可文件](https://www.7-zip.org/license.txt)。
-
-## 关于我们
-
-- 软件发布：[吾爱破解 &lt;https://www.52pojie.cn/thread-1955841-1-1.html&gt;](https://www.52pojie.cn/thread-1955841-1-1.html)
-- 官方网站：[雨糖科技 &lt;https://raincandy.tech&gt;](https://raincandy.tech)
