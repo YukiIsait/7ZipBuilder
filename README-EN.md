@@ -44,8 +44,3 @@ The file association icons and file manager skins currently used were downloaded
 
 - This project is licensed under the MIT license. See the [LICENSE](LICENSE.md) file for details.
 - The 7-Zip project is licensed under the GNU LGPL, BSD 3, and unRAR licenses. See the [LICENSE](https://www.7-zip.org/license.txt) file for details.
-
-## About Us
-
-- Release: [52PoJie &lt;https://www.52pojie.cn/thread-1955841-1-1.html&gt;](https://www.52pojie.cn/thread-1955841-1-1.html)
-- Website: [RainCandy Tech &lt;https://raincandy.tech&gt;](https://raincandy.tech)
