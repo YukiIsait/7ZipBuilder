@@ -30,7 +30,7 @@ The file association icons and file manager skins currently used were downloaded
 
 2. Check if the generated installer **7z2408.exe** is functional.
 
-## Online Compilation
+### Online Compilation
 
 > Online compilation can greatly simplify the compilation process, eliminating the need to install any software.
 
