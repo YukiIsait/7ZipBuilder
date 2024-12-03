@@ -5,7 +5,6 @@
 
 $workDir = $PSScriptRoot
 $tempDir = "$workDir\Temp"
-$resDir = "$workDir\Resources"
 $buildDir = "$workDir\$buildVersion"
 
 if (-not (Test-Path $tempDir)) {
@@ -25,12 +24,8 @@ if (-not (Test-Path $buildDir)) {
     & "$tempDir\7zr.exe" x "$tempDir\$buildVersion-src.7z" -o"$buildDir"
 }
 
-# 拷贝图标
-Copy-Item -Force -Recurse -Path "$resDir\FileIcons\*.ico" -Destination "$buildDir\CPP\7zip\Archive\Icons"
-
-# 拷贝资源文件
-Copy-Item -Force -Path "$resDir\Format7zF.rc" -Destination "$buildDir\CPP\7zip\Bundles\Format7zF\resource.rc"
-Copy-Item -Force -Path "$resDir\Fm.rc" -Destination "$buildDir\CPP\7zip\Bundles\Fm\resource.rc"
-
-# 拷贝UI图
-Copy-Item -Force -Path "$resDir\ToolBarIcons\*.bmp" -Destination "$buildDir\CPP\7zip\UI\FileManager"
+# 如果子流程存在则调用子流程用于自定义操作源码
+$subPrepareScript = "$workDir\SubPrepare.ps1"
+if (Test-Path $subPrepareScript) {
+    & $subPrepareScript $buildDir $buildVersion
+}
