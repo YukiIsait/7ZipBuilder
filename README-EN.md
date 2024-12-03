@@ -20,7 +20,7 @@ An automatic compilation script for [7-Zip](https://www.7-zip.org/), used to cus
 
 2. Check if the generated installer **7z2409.exe** is functional.
 
-## Online Compilation
+### Online Compilation
 
 > Online compilation can greatly simplify the compilation process, eliminating the need to install any software.
 
