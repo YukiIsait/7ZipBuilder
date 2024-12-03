@@ -2,33 +2,23 @@
 
 🌍 **[简体中文](README.md) | [English](README-EN.md)**
 
-An automatic compilation script for [7-Zip](https://www.7-zip.org/), which replaces the default file association icons and file manager skins with more attractive ones, and adds associations for Jar and War files.
-
-The file association icons and file manager skins currently used were downloaded online for personal use. If the original authors see this repository, please contact me to add author information.
-
-## File Manager Preview
-
-![Preview1](Previews/Preview1.png)
-
-## File Association Icons Preview
-
-![Preview1](Previews/Preview2.png)
+An automatic compilation script for [7-Zip](https://www.7-zip.org/), used to customize it more easily from the source code.
 
 ## Usage
 
-### Native Compilation
+## Native Compilation
 
 > - To execute `.ps1` scripts with PowerShell requires appropriate permissions, which are not covered here.
 > - Compilation requires **Visual Studio** with the **Desktop development with C++** workload installed.
-> - The following process uses version `7z2408` as an example.
+> - The following process uses version `7z2409` as an example.
 
 1. Automatic Build:
 
     ```pwsh
-    .\AutoBuild.ps1 7z2408
+    .\AutoBuild.ps1 7z2409
     ```
 
-2. Check if the generated installer **7z2408.exe** is functional.
+2. Check if the generated installer **7z2409.exe** is functional.
 
 ## Online Compilation
 
@@ -38,7 +28,24 @@ The file association icons and file manager skins currently used were downloaded
 2. Select the **Build** item in the **Actions** tab.
 3. Click **Run workflow** to start the compilation.
 4. After the compilation is complete, download the **7-Zip Installer** from the **Artifacts** section.
-5. Check if the generated installer **7z2408.exe** is functional.
+5. Check if the generated installer **7z2409.exe** is functional.
+
+## Customization
+
+> For more detailed usage, see the [More Modern 7-Zip](https://github.com/YukiIsait/MoreModern7Zip) project.
+
+Create `SubPrepare.ps1` in the same directory as the automatic compilation script, which accepts two parameters. This can be used to call custom processes when the script prepares the source code, such as replacing the original icons with custom ones:
+
+```pwsh
+param(
+    [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+    [string] $buildDirectory,
+    [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+    [string] $buildVersion
+)
+
+Copy-Item -Force -Recurse -Path "FileIcons\*.ico" -Destination "$buildDirectory\CPP\7zip\Archive\Icons"
+```
 
 ## License
 
