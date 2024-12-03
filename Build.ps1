@@ -16,9 +16,9 @@ if (-not (Test-Path $tempDir)) {
 # 下载并解压VsWhere
 if (-not (Test-Path "$tempDir\VsWhere")) {
     if (-not (Test-Path "$tempDir\vswhere.zip")) {
-        [System.Net.WebClient]::new().DownloadFile("https://www.nuget.org/api/v2/package/vswhere", "$tempDir\vswhere.zip")
+        Invoke-WebRequest -Uri "https://www.nuget.org/api/v2/package/vswhere" -OutFile "$tempDir\vswhere.zip"
     }
-    [System.IO.Compression.ZipFile]::ExtractToDirectory("$tempDir\vswhere.zip", "$tempDir\VsWhere")
+    Expand-Archive -Path "$tempDir\vswhere.zip" -DestinationPath "$tempDir\VsWhere"
 }
 
 # 查找并进入x64编译环境

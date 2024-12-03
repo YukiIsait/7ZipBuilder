@@ -39,7 +39,7 @@ Copy-Item -Destination "$outDir\Uninstall.exe" -Path "$buildDir\C\Util\7zipUnins
 
 # 下载并解压预编译包
 if (-not (Test-Path "$tempDir\$buildVersion-pre.7z")) {
-    [System.Net.WebClient]::new().DownloadFile("https://7-zip.org/a/$buildVersion-x64.exe", "$tempDir\$buildVersion-pre.7z")
+    Invoke-WebRequest -Uri "https://7-zip.org/a/$buildVersion-x64.exe" -OutFile "$tempDir\$buildVersion-pre.7z"
     & "$outDir\7z.exe" x "$tempDir\$buildVersion-pre.7z" -o"$prebuildDir"
 }
 
