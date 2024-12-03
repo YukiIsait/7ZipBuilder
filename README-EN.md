@@ -2,6 +2,8 @@
 
 🌍 **[简体中文](README.md) | [English](README-EN.md)**
 
+> **The finished product has been separated into an independent repository [More Modern 7-Zip](https://github.com/YukiIsait/MoreModern7Zip).**
+
 An automatic compilation script for [7-Zip](https://www.7-zip.org/), used to customize it more easily from the source code.
 
 ## Usage
