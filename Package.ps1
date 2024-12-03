@@ -1,10 +1,10 @@
 ﻿param(
     [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
-    [string] $buildVersion
+    [string] $BuildVersion
 )
 
 $workDir = $PSScriptRoot
-$buildDir = "$workDir\$buildVersion"
+$buildDir = "$workDir\$BuildVersion"
 $tempDir = "$workDir\Temp"
 $packDir = "$tempDir\Pack"
 $prebuildDir = "$tempDir\PreBuild"
@@ -38,9 +38,9 @@ Copy-Item -Destination "$outDir\7-zip32.dll" -Path "$buildDir\CPP\7zip\UI\Explor
 Copy-Item -Destination "$outDir\Uninstall.exe" -Path "$buildDir\C\Util\7zipUninstall\x64\7zipUninstall.exe"
 
 # 下载并解压预编译包
-if (-not (Test-Path "$tempDir\$buildVersion-pre.7z")) {
-    Invoke-WebRequest -Uri "https://7-zip.org/a/$buildVersion-x64.exe" -OutFile "$tempDir\$buildVersion-pre.7z"
-    & "$outDir\7z.exe" x "$tempDir\$buildVersion-pre.7z" -o"$prebuildDir"
+if (-not (Test-Path "$tempDir\$BuildVersion-pre.7z")) {
+    Invoke-WebRequest -Uri "https://7-zip.org/a/$BuildVersion-x64.exe" -OutFile "$tempDir\$BuildVersion-pre.7z"
+    & "$outDir\7z.exe" x "$tempDir\$BuildVersion-pre.7z" -o"$prebuildDir"
 }
 
 # 拷贝预编译文件
@@ -60,4 +60,4 @@ Copy-Item -Destination "$packDir\7z.sfx" -Path "$buildDir\C\Util\7zipInstall\x64
 Copy-Item -Destination "$packDir\7zCon.sfx" -Path "$buildDir\C\Util\7zipInstall\x64\7zipInstall.exe"
 
 # 打包
-& "$packDir\7z.exe" a -sfx -t7z -mx=9 -m0=LZMA -r "$workDir\$buildVersion.exe" "$outDir\*"
+& "$packDir\7z.exe" a -sfx -t7z -mx=9 -m0=LZMA -r "$workDir\$BuildVersion.exe" "$outDir\*"

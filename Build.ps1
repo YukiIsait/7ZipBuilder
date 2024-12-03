@@ -1,10 +1,10 @@
 ﻿param(
     [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
-    [string] $buildVersion
+    [string] $BuildVersion
 )
 
 $workDir = $PSScriptRoot
-$buildDir = "$workDir\$buildVersion"
+$buildDir = "$workDir\$BuildVersion"
 $tempDir = "$workDir\Temp"
 
 $currentDir = Get-Location
