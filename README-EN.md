@@ -6,7 +6,7 @@ An automatic compilation script for [7-Zip](https://www.7-zip.org/), used to cus
 
 ## Usage
 
-## Native Compilation
+### Native Compilation
 
 > - To execute `.ps1` scripts with PowerShell requires appropriate permissions, which are not covered here.
 > - Compilation requires **Visual Studio** with the **Desktop development with C++** workload installed.
