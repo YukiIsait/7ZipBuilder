@@ -32,7 +32,7 @@ An automatic compilation script for [7-Zip](https://www.7-zip.org/), used to cus
 
 ## Customization
 
-> For more detailed usage, see the [More Modern 7-Zip](https://github.com/YukiIsait/MoreModern7Zip) project.
+> For more detailed usage, see the [More Modern 7-Zip](https://github.com/YukiIsait/MoreModern7Zip).
 
 Create `SubPrepare.ps1` in the same directory as the automatic compilation script, which accepts two parameters. This can be used to call custom processes when the script prepares the source code, such as replacing the original icons with custom ones:
 
