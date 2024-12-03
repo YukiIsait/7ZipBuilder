@@ -12,4 +12,4 @@ $workDir = $PSScriptRoot
 & "$workDir\Build.ps1" $buildVersion -ErrorAction Stop
 
 # 导出编译好的文件并制作安装包
-& "$workDir\Pack.ps1" $buildVersion -ErrorAction Stop
+& "$workDir\Package.ps1" $buildVersion -ErrorAction Stop
