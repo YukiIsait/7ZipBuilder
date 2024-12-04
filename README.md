@@ -41,12 +41,12 @@
 ```pwsh
 param(
     [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
-    [string] $buildDirectory,
+    [string] $BuildDirectory,
     [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
-    [string] $buildVersion
+    [string] $BuildVersion
 )
 
-Copy-Item -Force -Recurse -Path "FileIcons\*.ico" -Destination "$buildDirectory\CPP\7zip\Archive\Icons"
+Copy-Item -Force -Recurse -Path "FileIcons\*.ico" -Destination "$BuildDirectory\CPP\7zip\Archive\Icons"
 ```
 
 ## 开源许可
